@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fragment_login_form_radius">5dp</dimen>
+    <dimen name="fragment_login_form_border">1dp</dimen>
+</resources>

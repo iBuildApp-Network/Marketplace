@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1"
+              android:orientation="vertical" android:background="#ffffff">
+
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="54dp"
+            android:id="@+id/logo"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+        <!--LOGIN WITH FACEBOOK-->
+        <LinearLayout android:id="@+id/login_screen_facebook_button" android:layout_height="55dp"
+                      android:layout_width="fill_parent" android:orientation="horizontal" android:paddingTop="4dp"
+                      android:paddingBottom="4dp" android:paddingLeft="4dp"
+                      android:background="@drawable/romanblack_fanwall_facebook_btn_bg"
+                      android:layout_marginTop="8dp">
+            <ImageView android:layout_height="45dp" android:layout_width="45dp"
+                       android:src="@drawable/romanblack_fanwall_fb_logo"/>
+            <TextView android:layout_height="45dp" android:layout_width="wrap_content" android:layout_marginLeft="9dp"
+                      android:text="Login with Facebook" android:textSize="18dp"
+                      android:textStyle="bold" android:textColor="#ffffff" android:gravity="center_vertical"/>
+        </LinearLayout>
+        <!--LOGIN WITH TWITTER-->
+        <LinearLayout android:id="@+id/login_screen_twitter_button" android:layout_height="55dp"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal" android:paddingTop="4dp" android:paddingBottom="4dp"
+                      android:paddingLeft="4dp" android:background="@drawable/romanblack_fanwall_twitter_btn_bg"
+                      android:layout_marginTop="8dp">
+            <ImageView android:layout_height="45dp" android:layout_width="45dp"
+                       android:src="@drawable/romanblack_fanwall_twitter_logo"/>
+            <TextView android:layout_height="45dp" android:layout_width="wrap_content" android:layout_marginLeft="9dp"
+                      android:text="Login with Twitter" android:textSize="18dp"
+                      android:textStyle="bold" android:textColor="#ffffff" android:gravity="center_vertical"/>
+        </LinearLayout>
+        <!-- Login with EMAIL-->
+        <LinearLayout android:id="@+id/login_screen_email_button" android:layout_height="55dp"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal" android:paddingTop="4dp" android:paddingBottom="4dp"
+                      android:paddingLeft="4dp" android:background="@drawable/romanblack_fanwall_orange_btn"
+                      android:layout_marginTop="8dp" android:baselineAligned="false">
+            <ImageView android:layout_height="45dp" android:layout_width="45dp"
+                    />
+            <TextView android:layout_height="45dp" android:layout_width="wrap_content" android:layout_marginLeft="9dp"
+                      android:text="Login with Email" android:textSize="18dp"
+                      android:textStyle="bold" android:textColor="#ffffff" android:gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/login_screen_create_new_account_layout"
+            android:layout_marginBottom="8dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:id="@+id/login_screen_text_or" android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal" android:textColor="#000000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a new account"
+                android:id="@+id/login_screen_create_new_account_button"
+                android:layout_gravity="center_horizontal" android:layout_marginTop="8dp" android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>
