@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <nine-patch android:src="@drawable/fragment_login_form_tab_login_on" android:dither="true" />
+    </item>
+    <item>
+        <nine-patch android:src="@drawable/fragment_login_form_tab_login_off" android:dither="true" />
+    </item>
+</selector>

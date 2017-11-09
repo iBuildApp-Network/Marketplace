@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.ibuildapp.masterapp">
+		  
+    <application
+            android:icon="@drawable/launch_icon"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:theme="@style/Theme.AppCompat.FullScreen"
+            android:name="android.support.multidex.MultiDexApplication"
+            android:hardwareAccelerated="true">
+
+        <activity android:name="MainActivity"
+                  android:label="@string/app_name"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+                android:launchMode="singleInstance"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="http"
+                    android:host="new.ibuildapp.com"
+                    android:pathPrefix=""/> <!-- DON'T REMOVE THIS -->
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+
+        </receiver>
+
+        <activity android:name=".CategoryDetails" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".AboutUsActivity" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".DealsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".FavouritesActivity" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".NewBusinessActivity" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name=".NewBusinessManuallyActivity" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity android:name=".CategoryListActivity" android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.Dialog"/>
+
+        <activity android:name=".SharingActivity" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+
+        <activity android:name=".ContactChooser" android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+        <!-- core -->
+        <activity android:name="com.appbuilder.core.AppBuilder" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ibuildappmarket" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.appbuilder.core.SplashScreen" android:screenOrientation="portrait"></activity>
+
+        <!-- Google Ad! Needed for new google-play-service lib -->
+        <meta-data tools:replace="value" android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+        <activity
+                android:name="com.google.android.gms.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <!-- Authorization Subsystem start -->
+        <activity android:name="com.appbuilder.sdk.android.authorization.FacebookAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.appbuilder.sdk.android.authorization.TwitterAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.appbuilder.sdk.android.authorization.VkontakteAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.appbuilder.sdk.android.authorization.LinkedInAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- ************************************* modules ********************************************************* -->
+        <!-- AudioPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.AudioPlugin"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.AudioPreviewActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.AudioPlayerActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.CommentsActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.CommentsToCommentActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.AuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.EMailAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.EMailSignUpActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.SendMessageActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.ibuildapp.romanblack.AudioPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+
+        <receiver android:name="com.ibuildapp.romanblack.AudioPlugin.PushBroadcast">
+            <intent-filter>
+                <action android:name="com.ibuildapp.romanblack.AudioPlugin.PUSH"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.ibuildapp.romanblack.AudioPlugin.BackGroundMusicService">
+        </service>
+
+        <!-- CallPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.CallPlugin.CallPlugin"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <!-- CalculatorPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.CalculatorPlugin.CalculatorPlugin"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/calculator"/>
+            </intent-filter>
+        </activity>
+
+        <!-- CameraPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.CameraPlugin.CameraPlugin"
+                  android:configChanges="orientation"/>
+        <activity android:name="com.ibuildapp.romanblack.CameraPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- CouponPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.CouponPlugin.CouponPlugin">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/coupon"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.CouponPlugin.CouponDetails"></activity>
+
+        <!-- CustomFormPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.CustomFormPlugin.CustomFormPlugin"
+                  android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/customform"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Directory plugin -->
+        <activity android:name="com.ibuildapp.romanblack.DirectoryPlugin.DirectoryPlugin"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.DirectoryPlugin.DirectoryPluginItemsList"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.DirectoryPlugin.DirectoryPluginItemDetails"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.DirectoryPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- ECommercePlugin -->
+        <activity android:name="com.ibuildapp.romanblack.ECommercePlugin.ECommercePlugin"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/ecom"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.ECommercePlugin.ECommerceBuy"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ECommercePlugin.ECommerceDetails"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden"/>
+        <activity android:name="com.paypal.android.MEP.PayPalActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:configChanges="keyboardHidden|orientation"/>
+
+        <!-- Emailplugin -->
+        <activity android:name="com.ibuildapp.romanblack.EmailPlugin.EmailPlugin"
+                  android:label="Email">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/email"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.EmailPlugin.addfile"
+                  android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="com.ibuildapp.romanblack.EmailPlugin.dellfile"
+                  android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="com.ibuildapp.romanblack.EmailPlugin.filelist"
+                  android:theme="@android:style/Theme.Dialog"></activity>
+
+        <!-- FanWallPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.FanWallPlugin"
+                  android:label="Fan wall"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.AuthorizationActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.FacebookAuthorizationActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.TwitterAuthorizationActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.EMailAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.EMailSignUpActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.MessageView"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.ImageViewActivity"
+                  android:configChanges="orientation"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.CameraActivity"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.SendMessageActivity"
+                  android:windowSoftInputMode="stateVisible|adjustResize"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboard"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.ProfileViewActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.FanWallMapActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.FanWallPhotoListActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.FanWallPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- MapPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.MapPlugin.MapPlugin">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/map"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.MapPlugin.MapBottomPanel"></activity>
+        <activity android:name="com.ibuildapp.romanblack.MapPlugin.WebViewer"></activity>
+
+        <!-- MenuPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.MenuPlugin.MenuPlugin"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.MenuPlugin.MenuPluginItemsList"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MenuPlugin.MenuPluginItemDetails"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MenuPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- MultiContects Plugin -->
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.MultiContactsActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.ContactDetailsActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.ContactsWebActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.ContactsMapActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.MultiContactsPlugin"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.MultiContactsPlugin.ContactsMap"
+                  android:screenOrientation="portrait"/>
+
+        <!-- NewsPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.NewsPlugin.NewsPlugin"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/rss"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.NewsPlugin.FeedDetails"></activity>
+        <activity android:name="com.ibuildapp.romanblack.NewsPlugin.EventsNotification"></activity>
+        <activity android:name="com.ibuildapp.romanblack.NewsPlugin.EventsNotificationView"/>
+
+        <!-- OpenTable -->
+        <activity android:name="com.ibuildapp.romanblack.OpenTablePlugin.WebActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.ibuildapp.romanblack.OpenTablePlugin.OpenTablePlugin"
+                  android:screenOrientation="portrait"/>
+
+        <!-- PhotoGallery plugin -->
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.PhotoGalleryPlugin"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.AlbumViewActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.CommentsActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.CommentsToCommentActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.AuthorizationActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.EMailAuthorizationActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.EMailSignUpActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.SendMessageActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.SharingActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.PhotoGalleryPlugin.PhotoGalleryDetails"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".LoginScreen.RegisterEmailAccountActivity"/>
+
+        <!-- QR PLUGIN -->
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.QRPlugin"
+                  android:screenOrientation="landscape"
+                  android:clearTaskOnLaunch="true"
+                  android:stateNotNeeded="true"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- Allow web apps to launch Barcode Scanner by linking to http://zxing.appspot.com/scan. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zxing.appspot.com" android:path="/scan"/>
+            </intent-filter>
+            <!-- We also support a Google Product Search URL. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="www.google.com" android:path="/m/products/scan"/>
+            </intent-filter>
+            <!-- And the UK version. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="www.google.co.uk" android:path="/m/products/scan"/>
+            </intent-filter>
+            <!-- Support zxing://scan/?... like iPhone app -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zxing" android:host="scan" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.PreferencesActivity"
+                  android:label="preferences"
+                  android:stateNotNeeded="true">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.encode.EncodeActivity"
+                  android:label="share"
+                  android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.ENCODE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- This allows us to handle the Share button in Contacts. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/x-vcard"/>
+            </intent-filter>
+            <!-- This allows us to handle sharing any plain text . -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.book.SearchBookContentsActivity"
+                  android:label="Search book"
+                  android:stateNotNeeded="true"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.share.ShareActivity"
+                  android:label="Share"
+                  android:stateNotNeeded="true"
+                  android:screenOrientation="user"
+                  android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SHARE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.history.HistoryActivity"
+                  android:label="History"
+                  android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.share.BookmarkPickerActivity"
+                  android:label="Bookmark"
+                  android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.share.AppPickerActivity"
+                  android:label="App"
+                  android:stateNotNeeded="true"
+                  android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.QRPlugin.HelpActivity"
+                  android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- ShopingCartPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.ShopingCartPlugin"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.CategoryProductDesigner"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.ProductDetails"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.Basket"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.EditUserProfile"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.OrderList"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.OrderSummary"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.ShopingCartPlugin.BasketHistory"
+                  android:screenOrientation="portrait"/>
+
+        <!-- SkCataloguePlugin -->
+        <activity android:name="com.ibuildapp.romanblack.SkCataloguePlugin.SkCataloguePlugin"/>
+
+        <activity android:name="com.ibuildapp.romanblack.SkCataloguePlugin.SkCatalogueMain" />
+        <activity android:name="com.ibuildapp.romanblack.SkCataloguePlugin.SkCatalogueDetails"/>
+
+        <!-- TablePlugin -->
+        <activity android:name="com.ibuildapp.romanblack.TablePlugin.TablePlugin"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/table"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.TablePlugin.TableDetails"></activity>
+
+        <!-- Table Reservation -->
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationPlugin"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationLogin"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationTwitterAuthorization"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservatoinFacebookAuthorization"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationModify"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationReservation"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationSpecialRequest"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationSummary"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationMap"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationMapRoute"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationEMailSignUpActivity"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservatioinListOfReservations"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name="com.ibuildapp.romanblack.TableReservationPlugin.TableReservationPersonPicker"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.Dialog"></activity>
+
+        <!-- TwitterPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.TwitterPlugin"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.TweetDetailsActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.TwitterUrlsViewer"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.AccountActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.MediaActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.PostAReplyActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.UserListActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.TwitterPlugin.PostReplyActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!-- VideoPlugin -->
+        <activity   android:name="com.ibuildapp.romanblack.VideoPlugin.VideoPlugin"
+                    android:label="@string/app_name"
+                    android:screenOrientation="portrait"/>
+        <activity   android:name="com.ibuildapp.romanblack.VideoPlugin.CommentsActivity"
+                    android:label="@string/app_name"
+                    android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.CommentsToCommentActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.VideoPlayer"
+                android:label="@string/app_name"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.AuthorizationActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.FacebookAuthorizationActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.TwitterAuthorizationActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.EMailAuthorizationActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.EMailSignUpActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.SendMessageActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.PlayerWebActivity"
+                android:configChanges="orientation"/>
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.SharingActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity android:name="com.ibuildapp.romanblack.VideoPlugin.VideoBuffer"
+                  android:screenOrientation="portrait"/>
+
+        <receiver android:name="com.ibuildapp.romanblack.VideoPlugin.PushBroadcast">
+            <intent-filter>
+                <action android:name="com.ibuildapp.romanblack.VideoPlugin.PUSH"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- WebPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.WebPlugin.WebPlugin"
+            android:hardwareAccelerated="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="ibuildapp.romanblack/web"/>
+            </intent-filter>
+        </activity>
+
+        <!-- GoogleFormsPlugin -->
+        <activity android:name="com.ibuildapp.romanblack.GoogleFormsPlugin.GoogleFormsPlugin"
+                  android:screenOrientation="portrait"/>
+
+        <!-- Cordova plugin -->
+        <activity android:name="com.ibuildapp.romanblack.CordovaPlugin.CordovaPlugin"/>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <permission android:name="com.appbuilder.core.permission.C2D_MESSAGE"
+                android:protectionLevel="signature"/>
+
+    <!--<uses-permission android:name="com.appbuilder.core.permission.C2D_MESSAGE"/>-->
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!--ContactsPlugin-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!--CallPlugin, ContactsPlugin-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- MediaPlugin -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- CameraPlugin -->
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <!-- NewsPlugin -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+</manifest>

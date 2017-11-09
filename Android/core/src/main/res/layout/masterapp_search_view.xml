@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="40dp" android:layout_gravity="left|center_vertical"
+              android:gravity="center_vertical" android:paddingLeft="10dp" android:paddingRight="10dp"
+              android:background="@drawable/white_rounded_rectangle" android:id="@+id/search_root">
+    <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_search_view"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/search" android:layout_weight="1" android:layout_marginLeft="5dp"
+            android:hint="@string/search" android:background="@null" android:textSize="14dp"
+            android:visibility="visible" android:textColor="@color/black_trans_90"
+            android:textColorHint="@color/black_trans_60" android:inputType="textNoSuggestions"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="25dp"
+            android:layout_height="25dp" android:gravity="center" android:id="@+id/cancel" android:visibility="gone">
+        <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:visibility="visible" android:src="@drawable/delete_searchview"/>
+    </LinearLayout>
+</LinearLayout>

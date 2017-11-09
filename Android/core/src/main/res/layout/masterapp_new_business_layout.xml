@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:id="@+id/business_root" android:background="@color/bg_grey">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/scroll">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" android:background="@color/text_grey" android:layout_marginTop="15dp">
+            </LinearLayout>
+            <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp" android:background="@color/white" android:gravity="center_vertical"
+                    android:id="@+id/business_change_category">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:id="@+id/textView" android:textColor="@color/text_black" android:layout_marginLeft="10dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/business_category" android:layout_toLeftOf="@+id/imageView" android:layout_marginRight="20dp"
+                        android:textColor="@color/text_grey"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:id="@+id/imageView" android:layout_alignParentRight="true"
+                        android:src="@drawable/grey_arrow" android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" android:background="@color/text_grey"
+                    android:layout_marginBottom="20dp">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" android:background="@drawable/grey_border"
+                    android:gravity="center_vertical" android:longClickable="false"
+                    android:id="@+id/business_fb_edit_holder">
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp" android:src="@drawable/facebook"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/business_fb_edit" android:background="@null" android:layout_marginLeft="15dp"
+                        android:textColor="@color/text_black" android:hint="@string/enter_fb_page"
+                        android:layout_marginRight="10dp" android:textSize="16dp" android:singleLine="true"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/or"
+                    android:gravity="center" android:textColor="@color/text_black"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" android:background="@drawable/grey_border"
+                    android:gravity="center_vertical" android:id="@+id/business_website_edit_holder">
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp" android:src="@drawable/website"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/business_website_edit" android:background="@null" android:layout_marginLeft="15dp"
+                        android:textColor="@color/text_black" android:hint="@string/enter_website_url"
+                        android:layout_marginRight="10dp" android:textSize="16dp" android:singleLine="true"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/or"
+                    android:gravity="center" android:textColor="@color/text_black"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:text="@string/enter_manually"
+                    android:id="@+id/business_manually" android:gravity="center" android:textColor="@color/blue"
+                    android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

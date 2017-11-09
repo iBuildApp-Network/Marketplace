@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="fragment_login_form_tab_grey">#899aa2</color>
-    <color name="fragment_login_form_edittext_text_no_error">#999999</color>
-    <color name="fragment_login_form_edittext_text_error">#cb0000</color>
-    <color name="fragment_login_form_edittext_background">#dedede</color>
-</resources>

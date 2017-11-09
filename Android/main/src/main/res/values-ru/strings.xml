@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_home_upper">Домой</string>
+    <string name="common_back_upper">Назад</string>
+    <string name="common_send_upper">Отправить</string>
+    <string name="one_from_one">1 из 1</string>
+    <string name="close">Закрыть</string>
+    <string name="open_app">Открыть приложение</string>
+    <string name="load">Загрузка...</string>
+    <string name="dont_allow">Не разрешать</string>
+    <string name="location_question">\" запрашивает информацию о вашем текущем местоположение?</string>
+    <string name="ok">OK</string>
+    <string name="refresh">Обновление данных приложения</string>
+    <string name="no_sd_card">For work of the application an SD card needs to be inserted to the device.</string>
+    <string name="no_datasource">The data source was not found. The application will be closed.</string>
+    <string name="no_internet_connection">Cannot initialize app, please check internet connection. Turn on wi-fi or
+        mobile internet.
+    </string>
+    <string name="need_internet_connection">Пожалуйста, проверьте соединение с интернет.</string>
+
+    <string name="alert_cannot_init">Инициализация не удалась. Пожалуйста, попробуйте еще раз</string>
+    <string name="feedback_text_hint">Введите сообщение - оно будет доставлено автору приложения</string>
+    <string name="feedback_alert_send_ok">Спасибо! Пожалуйста, попробуйте запустить приложение позже</string>
+    <string name="feedback_type_message">Введите сообщение</string>
+
+    <string name="login">Логин</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="remember_me">Запомнить меня</string>
+    <string name="forgot_pass">Забыли пароль?</string>
+    <string name="password_restoration">Восстановление Пароля</string>
+    <string name="to_reset_password">Введите адрес эелектронной почты, который Вы использовали при регистрации</string>
+    <string name="email_upper">Email</string>
+    <string name="reset_upper">Сбросить</string>
+    <string name="input_correct_email">Введите корректный адрес электронной почты</string>
+    <string name="login_progress">Авторизация...</string>
+    <string name="password_was_sent">Пароль был отправлен на вашу электронную почту</string>
+    <string name="password_reset">Сброс пароля</string>
+    <string name="email_not_found">Извините, адрес вашей электронной почты не был найден в нашей базе данных.
+        Пожалуйста, попробуйте еще раз
+    </string>
+    <string name="reset_progress">Сброс...</string>
+    <string name="login_no_internet">Авторизация не удалась. Включите wi-fi или мобильный интернет</string>
+    <string name="reset_no_internet">Сброс не удался. Включите wi-fi или мобильный интернет</string>
+    <string name="wrong_login_information">Неверный логин или пароль</string>
+    <string name="check_login_info">Пожолуйста, проверьте ваш логин и пароль</string>
+
+    <string name="core_notification">уведомление</string>
+    <string name="core_refresh_date">Обновить данные приложения</string>
+    <string name="core_push_no_such_widget">Виджет для этого уведомления отсутствует. Обновите приложение</string>
+    <string name="core_pushns_content_update_msg">Приложение обновилось. Пожалуйста, перезапустите приложение</string>
+
+    <string name="fragment_login_form_register">Регистрация</string>
+    <string name="fragment_login_form_login">Войти</string>
+    <string name="fragment_login_form_hint_name">Имя</string>
+    <string name="fragment_login_form_hint_email">Email</string>
+    <string name="fragment_login_form_hint_email_restore_password">Email</string>
+    <string name="fragment_login_form_hint_password">Пароль</string>
+    <string name="fragment_login_form_hint_password_confirm">Подтвердите пароль</string>
+    <string name="fragment_login_form_remember_me">Запомнить меня</string>
+    <string name="fragment_login_form_forgot_my_password">Забыли пароль?</string>
+    <string name="fragment_login_form_registration_complete_message_manual">Регистрация завершена. На ваш Email придет придет письмо для подтверждения регистрации. Пройдите по ссылке для завершения процесса регистрации.</string>
+    <string name="fragment_login_form_registration_complete_message_manual_no_email">Регистрация завершена. Вы получите уведомление о подтверждении регистрации.</string>
+    <string name="fragment_login_form_registration_complete_message_auto">Регистрация завершена. На ваш Email придет письмо для подтверждения регистрации. Пройдите по ссылке для того, чтобы завершить регистрацию и начать пользоваться приложением.</string>
+    <string name="fragment_login_form_registration_failed_message">Данный Email уже зарегистрирован в системе.</string>
+    <string name="fragment_login_form_login_failed_message">Не удалось войти в аккаунт. Пожалуйста попробуйте еще раз, смените пароль или зарегистрируйтесь.</string>
+    <string name="fragment_login_form_restore_password">Отправить</string>
+    <string name="fragment_login_form_restore_password_complete_message">Письмо с новым паролем отправлено на ваш Email.</string>
+    <string name="fragment_login_form_restore_password_title">Для того, чтобы сменить пароль, введите Email, который вы использовали при регистрации.</string>
+    <string name="fragment_login_form_push_message">Регистрация приложения app_name прошла успешно.</string>
+    <string name="fragment_login_form_app_name_template">app_name</string>
+    <string name="fragment_login_form_error_email">Проверьте правильность введеных данных.</string>
+    <string name="fragment_login_form_error_name">Введите имя пользователя.</string>
+    <string name="fragment_login_form_error_password">Пароль должен содержать минимум 6 символов.</string>
+    <string name="fragment_login_form_error_confirm_password">Пожалуйста, введите одинаковые пароли.</string>
+    <string name="created_using_ibuildapp">Разработано с помощью iBuildApp.com</string>
+
+</resources>

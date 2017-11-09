@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="45dip"
+  android:layout_height="45dip"
+  android:orientation="vertical">
+    <ImageView android:src="@drawable/icon" 
+       android:id="@+id/core_tab_icon" 
+       android:layout_height="23dp" 
+       android:layout_width="23dp" 
+       android:maxHeight="23dp" 
+       android:adjustViewBounds="true" 
+       android:scaleType="center" 
+       android:layout_marginTop="7dp"
+       android:layout_marginBottom="5dp"
+       android:layout_gravity="center">
+</ImageView>
+
+    <TextView 
+       android:text="Fffffsdf"
+       android:id="@+id/core_tab_label" 
+       android:layout_height="wrap_content" 
+       android:layout_width="fill_parent" 
+       android:gravity="center"
+       android:textSize = "10sp"
+       android:layout_gravity="center" android:textColor="#ffffff"></TextView>
+</LinearLayout>

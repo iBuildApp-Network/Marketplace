@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#21ade7</color>
+    <color name="text_black">#444444</color>
+    <color name="bg_grey">#EfEfEf</color>
+    <color name="text_grey">#989898</color>
+    <color name="border_grey">#c7c7c7</color>
+    <color name="border_red">#cc0000</color>
+    <color name="sidebar_background">#2e3336</color>
+    <color name="app_title">#444444</color>
+
+    <color name="applist_background">#e7e7e7</color>
+
+    <color name="white_trans_20">#33ffffff</color>
+    <color name="white_trans_80">#ccffffff</color>
+
+    <color name="black_trans_90">#e6000000</color>
+    <color name="black_trans_60">#99000000</color>
+    <color name="black_trans_20">#33000000</color>
+    <color name="black_trans_10">#19000000</color>
+
+    <color name="facebook_topbar">#314f90</color>
+    <color name="twitter_topbar">#57adee</color>
+    <color name="iba_background">#17161b</color>
+    <color name="iba_main_text">#2e175d</color>
+    <color name="iba_text">#d4d4e3</color>
+
+
+</resources>

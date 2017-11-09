@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="separato_height">1dp</dimen>
+    <dimen name="template_singleline_height">40dp</dimen>
+    <dimen name="template_multiline_height">90dp</dimen>
+    <dimen name="template_left_right_padding">10dp</dimen>
+</resources>

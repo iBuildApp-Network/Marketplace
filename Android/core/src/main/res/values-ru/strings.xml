@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iBuildApp Network Marketplace (alpha)</string>
+    <string name="search_hint">Поиск</string>
+    <string name="search">Поиск</string>
+    <string name="back">Назад</string>
+    <string name="cancel">Отмена</string>
+    <string name="featured">Популярные</string>
+    <string name="add_business">Создать приложение</string>
+    <string name="loading">Загрузка</string>
+    <string name="no_internet">Отсутствует соединение с интернетом</string>
+    <string name="deals">Скидки</string>
+    <string name="deals_details">Купоны и специальные предложения</string>
+    <string name="favourites">Избранное</string>
+    <string name="add_new_business_title">Создать</string>
+    <string name="enter_fb_page">Введите адрес FB страницы</string>
+    <string name="enter_website_url">Введите адрес сайта</string>
+    <string name="enter_manually">Ввести вручную</string>
+    <string name="unable_connect">Сервер не отвечает</string>
+    <string name="or">ИЛИ</string>
+    <string name="done">Готово</string>
+    <string name="add_logo">Добавьте логотип</string>
+    <string name="no_result">Результатов не найдено</string>
+    <string name="no_templates">Шаблоны для категорий отсутствуют</string>
+    <string name="select_category">Выберите категорию</string>
+    <string name="about_us">О нас</string>
+    <string name="invite">Пригласить</string>
+    <string name="email_sharing_subject">iBuildapp Marketplace</string>
+
+    <string name="incorrect_fb_page">Некорректрая страница facebook</string>
+    <string name="incorrect_website_url">Некорректный адрес сайта</string>
+
+    <string name="about_us_description">iBuildapp business directory puts all the businesses and services you use at your fingertips from your salon to your accountant.</string>
+    <string name="about_us_description_part2">Organize your life or find what you are looking for.</string>
+    <string name="about_us_description_part3">Create your own app with</string>
+
+    <string name="sharing_success">Сообщение было успешно опубликовано на стену</string>
+    <string name="sharing_error">Сообщение не было опубликовано на стену</string>
+    <string name="sharing_dublicated">Сообщение не было опубликовано на стену, т.к. такое сообщение на стене уже есть</string>
+    <string name="sharing_label">Поделиться</string>
+    <string name="sharing_text">Скачайте приложение iBuildApp marketplace</string>
+
+    <string name="sharing_post_facebook">Отправить</string>
+    <string name="sharing_post_twitter">Твитнуть</string>
+    <string name="sharing_sms_title">Выберите контакты</string>
+
+    <string name="sharing_sms_success">Смс были успешно отправлены</string>
+    <string name="sharing_sms_error">Ошибка при отправке смс</string>
+    <string name="dApp">dApp</string>
+
+
+</resources>

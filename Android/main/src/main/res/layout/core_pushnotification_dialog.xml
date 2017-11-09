@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:gravity="center_horizontal|top">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/splash_screen_ibuildapp_paied" android:adjustViewBounds="true"
+                android:id="@+id/notification_img" android:visibility="gone"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="15dp" android:id="@+id/notification_temp_layout">
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/notification_text" android:textColor="#ffffff" android:textSize="15dp"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:id="@+id/notification_temp_layout_bottom">
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right" android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" android:src="@drawable/push_dialog_btn_close"
+            android:id="@+id/notification_close" android:visibility="visible"/>
+</FrameLayout>

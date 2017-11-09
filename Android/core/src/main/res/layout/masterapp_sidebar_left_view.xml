@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:paddingLeft="15dp" android:paddingTop="40dp"
+              android:paddingRight="15dp" android:background="@color/sidebar_background">
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/favourites"
+            android:id="@+id/sidebar_favourites_btn" android:background="@drawable/grid_custom_background" android:textColor="@color/white"
+            android:gravity="center_vertical|left" android:textSize="21dp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/white_trans_20"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/invite"
+            android:id="@+id/sidebar_invite_btn" android:textSize="21dp" android:textColor="@color/white"
+            android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:id="@+id/sidebar_sharing_holder"
+            android:layout_marginBottom="10dp" android:visibility="visible">
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/sidebar_facebook_sharing" android:src="@drawable/sharing_facebook"/>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/sidebar_twitter_sharing" android:src="@drawable/sharing_twitter"
+                android:layout_marginLeft="8dp" android:layout_marginRight="8dp"/>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/sidebar_email_sharing" android:src="@drawable/sharing_email"/>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/sidebar_sms_sharing" android:src="@drawable/sharing_sms"
+                android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/white_trans_20"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="@string/about_us"
+            android:id="@+id/sidebar_about_btn" android:background="@drawable/grid_custom_background" android:textColor="@color/white"
+            android:gravity="center_vertical|left" android:textSize="21dp"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="@string/dApp"
+        android:id="@+id/sidebar_dapp_btn" android:background="@drawable/grid_custom_background" android:textColor="@color/white"
+        android:gravity="center_vertical|left" android:textSize="21dp"/>
+</LinearLayout>

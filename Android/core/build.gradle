@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion "Google Inc.:Google APIs:23"
+    buildToolsVersion "25.0.0"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.ibuildapp.network_marketplace"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file("keystore.keystore")
+            storePassword "k20170220pass"
+            keyAlias "k2017022020170901"
+            keyPassword "p20170901pass"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        incremental false
+        javaMaxHeapSize "4g"
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+
+    //core
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+  //  compile "com.ibuildapp:sdk:$iBuildAppSdkVersion"
+    compile project(':master_api')
+    compile project(':master_main')
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+  //  compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    //modules
+    compile project (':android_module_web')
+//    compile project(':android_module_photogallery')
+//    compile project(':android_module_audiolist')
+//    compile project(':android_module_bookstore')
+  //  compile project(':android_module_calculator')
+//    compile project(':android_module_catalog')
+//    compile project(':android_module_cordova')
+//    compile project(':android_module_coupons')
+//    compile project(':android_module_customform')
+//    compile project(':android_module_ebook')
+//    compile project(':android_module_ecommerce')
+//    compile project(':android_module_facebook')
+//    compile project(':android_module_fanwall')
+//    compile project(':android_module_googleforms')
+//    compile project(':android_module_groupedcontacts')
+//    compile project(':android_module_map')
+//    compile project(':android_module_menu')
+//    compile project(':android_module_news')
+//    compile project(':android_module_opentable')
+
+//    compile project(':android_module_qrcodereader')
+ //   compile project(':android_module_reservation')
+//    compile project(':android_module_shoppingcart')
+//    compile project(':android_module_takepicture')
+//    compile project(':android_module_taptocall')
+//    compile project(':android_module_taptoemail')
+//    compile project(':android_module_twitter')
+//    compile project(':android_module_videolist')
+    compile project(':android_module_web')
+  //  compile project(':android_module_zopimchat')
+}

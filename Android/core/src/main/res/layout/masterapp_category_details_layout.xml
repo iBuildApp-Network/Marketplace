@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="5dp" android:paddingRight="5dp"
+            android:background="@color/iba_background" android:id="@+id/main_search_holder">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/favourites"
+                    android:singleLine="false" android:textColor="@color/white" android:textSize="18dp"
+                    android:id="@+id/topbar_title"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" android:gravity="center" android:id="@+id/back_btn">
+            <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_from_app"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:textColor="@color/white" android:textSize="16dp"
+                    android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+        <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/search_btn_holder"
+                android:layout_alignParentRight="true">
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_search" android:layout_gravity="center_vertical|right" android:id="@+id/search_btn"
+                    android:layout_marginRight="5dp" android:longClickable="false" android:padding="7dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:id="@+id/search_cancel_text" android:layout_gravity="center" android:textColor="@color/white"
+                    android:visibility="gone"/>
+        </FrameLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:layout_toLeftOf="@+id/search_btn_holder"
+                android:id="@+id/search_edittext_holder" android:visibility="gone">
+            <com.ibuildapp.masterapp.view.EditTextHandleBackPressed
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/search_edittext" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                    android:paddingLeft="5dp" android:paddingRight="5dp" android:singleLine="true"
+                    android:hint="@string/search_hint" android:textSize="14dp"
+                    android:textColor="@color/black_trans_90" android:textColorHint="@color/black_trans_60"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/black" android:id="@+id/applist_separator"
+            android:layout_below="@+id/main_search_holder">
+    </LinearLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_below="@+id/applist_separator"
+            android:background="@color/iba_background" android:paddingRight="6dp"
+            android:paddingLeft="6dp">
+        <GridView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/applist_list" android:layout_below="@+id/applist_separator"
+                android:layout_marginTop="4dp" android:layout_marginBottom="4dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_result"
+                android:id="@+id/applist_no_result" android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" android:visibility="gone" android:textColor="@color/black_trans_90"/>
+    </FrameLayout>
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/indeterminate_drawable"
+            android:id="@+id/applist_progress" android:layout_alignParentBottom="true" android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"/>
+    <!--
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:id="@+id/applist_progress" android:layout_alignParentBottom="true"/>
+            -->
+</RelativeLayout>
