@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Token example</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="text-center" style="padding-top: 20px;"><img class="img-fluid" src="logo.png" width="120" alt="logo"></div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center"><strong>IBA token</strong></h1>
+		</div>
+			<div class="col-md-12" style="padding-top: 50px; text-align: left;">
+				<p><strong>Your balance: </strong><a id="check-my-balance" style="text-decoration:underline;cursor:pointer;">check balance</a><span id="my-balance" style="display:none;"><span class="balanceOf color"></span> <span class="symbol color"></span></p>
+				<p><strong>Symbol of token: </strong><span class="symbol color"></span></p>
+				<p><strong>Name of token: </strong><span class="name color"></span></p>
+				<p><strong>Token contract address: </strong><span class="color">0xef88808d0Fbb5c0C2C89F6d9B45EDa53c0150993</span></p>
+				<p><strong>Total Supply: </strong><span class="mainbalance color"></span></p>
+				<p><strong>Decimals: </strong><span class="decimals color"></span></p>
+			</div>
+		<div class="col-md-12" style="padding-top: 50px;">
+			<h2>Check balance by address: <span class="color" id="check_result"></span></h2>
+			<form class="input-group" id="check_form">
+				<input type="text" id="check_address" class="form-control" required placeholder="0x0000000000000000000000000000000000000000">
+				<span class="input-group-btn">
+					<button class="btn btn-secondary" type="submit">OK</button>
+				</span>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="errorModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Error</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>No Web3 connection! Please use Chrome, install MetaMask and then try again!</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="successModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Success</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p id="success"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
