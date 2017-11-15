@@ -1,0 +1,45 @@
+body {
+	background-color: #3a3a51;
+}
+
+img {
+	align-content: center;
+}
+
+.container {
+	color: #fff;
+	padding-top: 50px;
+}
+
+.container h1 {
+	color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 28px;
+}
+
+.container p {
+	font-size: 18px;
+}
+
+.container .color {
+	color: #3fbbfa;
+}
+
+button {
+	cursor: pointer;
+}
+
+.input-group {
+	padding-bottom: 10px;
+}
+
+.btn-secondary {
+	background-color: #3fbbfa;
+	border-color: #3fbbfa;
+}
+
+.btn-secondary.active, .btn-secondary:active, .btn-secondary:hover, .btn-secondary.focus, .btn-secondary:focus {
+								  background-color: #2299dd;
+    border-color: #2299dd;
+}
