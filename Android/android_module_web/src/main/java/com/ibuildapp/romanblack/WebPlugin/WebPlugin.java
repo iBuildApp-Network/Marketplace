@@ -109,7 +109,7 @@ import java.util.List;
 public class WebPlugin extends AppBuilderModuleMain {
     public static final int ETHER_CHAIN_ID = 4;
     public final String headDepends = "<script type=\"text/javascript\" src=\"https://dapps.ibuildapp.com/widget/web3/dist/web3.min.js\"></script>\n" +
-                                     " <script type=\"text/javascript\" src=\"https://dapps.ibuildapp.com/widget/main.js\"></script>";
+            "              <script type=\"text/javascript\" src=\"https://dapps.ibuildapp.com/widget/ethereum.js\"></script>";
 
     public class JSInterface{
         private String currentPass;
@@ -1060,7 +1060,7 @@ public class WebPlugin extends AppBuilderModuleMain {
             Log.e("DOC", ex.getMessage());
         }
     }
-    // DApp
+   // DApp
     private class parseUrl extends AsyncTask<Void, Void, String> {
 
         @Override
@@ -1258,14 +1258,16 @@ public class WebPlugin extends AppBuilderModuleMain {
     }
 
     private enum states {
-
         EMPTY, LOAD_START, LOAD_PROGRESS, LOAD_COMPLETE
+    }
+
+
+    public void testVoid () {
+        String str = "Testing" ;
+
     }
 }
 
-/**
- * Using to show HTML page correctly any case
- */
 class ObservableWebView extends WebView {
 
     private OnScrollChangedCallback mOnScrollChangedCallback;
@@ -1289,7 +1291,6 @@ class ObservableWebView extends WebView {
             mOnScrollChangedCallback.onScroll(l, t);
         }
     }
-
     /**
      * Redraws content to show it correctly
      */
