@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_facebook">Facebook</string>
+    <string name="share_twitter">Twitter</string>
+    <string name="share_email">Email</string>
+    <string name="share_save_picture">Сохранить</string>
+    <string name="share_message">Сообщение</string>
+
+    <string name="sidebar_to_masterapp">На главную</string>
+    <string name="sidebar_to_favorites">В избранное</string>
+    <string name="sidebar_share">Поделиться</string>
+    <string name="sidebar_flag_content">Пожаловаться</string>
+
+    <string name="complain_ok">Ваш запрос успешно отправлен и будет в ближайшее время рассмотрен</string>
+    <string name="complain_no_internet">Отсутствует соединение с интернетом</string>
+    <string name="complain_false">Неозможно подключиться к серверу</string>
+
+    <string name="cancel">Отмена</string>
+    <string name="sharing_success">Сообщение было успешно опубликовано</string>
+    <string name="sharing_error">Сообщение не было опубликовано</string>
+    <string name="sharing_dublicated">Сообщение не было опубликовано, т.к. такое сообщение на стене уже есть</string>
+    <string name="sharing_label">Поделиться</string>
+    <string name="sharing_text">Скачайте приложение iBuildApp marketplace</string>
+
+    <string name="sharing_post_facebook">Отправить</string>
+    <string name="sharing_post_twitter">Твитнуть</string>
+    <string name="sharing_sms_title">Выберите контакты</string>
+
+    <string name="sharing_sms_success">Смс были успешно отправлены</string>
+    <string name="sharing_sms_error">Ошибка при отправке смс</string>
+
+    <string name="loading">Загрузка</string>
+    <string name="search">Поиск</string>
+    <string name="done">Готово</string>
+
+    <string name="sharing_email_found">Я нашел это приложение в iBuildApp Market:</string>
+
+</resources>

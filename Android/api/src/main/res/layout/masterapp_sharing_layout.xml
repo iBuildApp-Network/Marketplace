@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout android:layout_height="50dp"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/sharing_topbar">
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/sharing_cancel"
+                      android:gravity="center_vertical|center_horizontal" android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"/>
+        </LinearLayout>
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:visibility="visible" android:text="@string/sharing_label"
+                android:layout_centerInParent="true"/>
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/sharing_post"
+                      android:gravity="center_vertical|center_horizontal"
+                      android:paddingLeft="5dp" android:paddingRight="3dp" android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sharing_post_twitter"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" android:id="@+id/sharing_post_text"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText android:id="@+id/sharing_edittext"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        android:textColor="@color/black_trans_90"
+        android:textColorHint="@color/black_trans_60"
+        android:textCursorDrawable="@null"
+              android:gravity="top" android:text="@string/sharing_text" android:background="@android:color/white"
+              android:padding="5dp"/>
+
+</LinearLayout>

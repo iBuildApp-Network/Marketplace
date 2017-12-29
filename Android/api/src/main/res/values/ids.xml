@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="icon" />
+    <item type="id" name="title" />
+
+    <item type="id" name="sidebar_item_icon" />
+    <item type="id" name="sidebar_item_label" />
+    <item type="id" name="sidebar_item_bottom_view" />
+</resources>

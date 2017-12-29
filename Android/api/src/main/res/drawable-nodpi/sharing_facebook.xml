@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#3c5a96" />
+        </shape>
+    </item>
+    <item android:top="30px"
+          android:left="30px"
+          android:bottom="30px"
+          android:right="30px">
+        <bitmap android:src="@drawable/sharing_facebook_logo" />
+    </item>
+</layer-list>

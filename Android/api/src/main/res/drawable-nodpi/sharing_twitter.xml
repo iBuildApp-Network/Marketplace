@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#2aa9e0" />
+        </shape>
+    </item>
+    <item android:top="15px"
+          android:left="15px"
+          android:bottom="15px"
+          android:right="15px">
+        <bitmap android:src="@drawable/sharing_twitter_logo" />
+    </item>
+</layer-list>

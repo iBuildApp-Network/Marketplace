@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:orientation="vertical"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content" android:background="#f3cfff">-->
+
+<!--<LinearLayout-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="60dp" android:gravity="center_vertical">-->
+<!--<LinearLayout-->
+<!--android:orientation="vertical"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content" android:layout_margin="5dp" android:background="#fffa9b">-->
+<!--<CheckBox-->
+<!--android:layout_width="24dp"-->
+<!--android:layout_height="24dp"-->
+<!--android:id="@+id/checkBox"-->
+<!--android:background="@drawable/checkbox_selector" android:button="@null" android:layout_margin="3dp"-->
+<!--android:checked="true"/>-->
+<!--</LinearLayout>-->
+<!--<RelativeLayout-->
+<!--android:orientation="vertical"-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="fill_parent" android:layout_marginLeft="5dp" android:background="#b4da73"-->
+<!-->-->
+
+<!--<TextView-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="New Text"-->
+<!--android:id="@+id/name" android:textColor="@color/black" android:textSize="18dp"-->
+<!--android:background="#a68b8c"-->
+<!--android:layout_alignWithParentIfMissing="false"/>-->
+<!--<TextView-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="New Text"-->
+<!--android:id="@+id/phone" android:background="#6770ff" android:layout_marginTop="3dp"-->
+<!--android:layout_below="@+id/name"/>-->
+<!--</RelativeLayout>-->
+<!--</LinearLayout>-->
+<!--</LinearLayout>-->
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/listview_transperant_selector">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="48dp"
+            android:layout_height="match_parent" android:focusableInTouchMode="false" android:id="@+id/checkbox_holder"
+            android:gravity="center">
+        <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null" android:checked="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/checkbox_holder" android:paddingRight="10dp">
+        <TextView
+                android:textSize="17dp"
+                android:id="@+id/name"
+                android:gravity="center_vertical"
+                android:text="John Snow"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingTop="2dp"
+                android:textColor="@color/black_trans_90" android:singleLine="true"/>
+
+        <TextView
+                android:id="@+id/phone"
+                android:gravity="center_vertical"
+                android:text="+7 890 123 00 99"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingBottom="2dp"
+                android:textColor="@color/black_trans_60" android:textSize="12dp" android:singleLine="true"/>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_alignParentBottom="true"
+            android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="@color/black_trans_20" android:layout_toRightOf="@+id/checkbox_holder"/>
+
+</RelativeLayout>

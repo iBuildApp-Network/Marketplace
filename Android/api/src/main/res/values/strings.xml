@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_facebook">Facebook</string>
+    <string name="share_twitter">Twitter</string>
+    <string name="share_email">Email</string>
+    <string name="share_save_picture">Save Picture</string>
+    <string name="share_message">Message</string>
+
+    <string name="sidebar_to_masterapp">To Homepage</string>
+    <string name="sidebar_to_favorites">To Favorites</string>
+    <string name="sidebar_share">Share</string>
+    <string name="sidebar_flag_content">Flag Content</string>
+
+    <string name="complain_ok">Your complain has been send and will be consider in short</string>
+    <string name="complain_no_internet">No internet connection available</string>
+    <string name="complain_false">Unable connect to server</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="sharing_success">Message has been successfully posted</string>
+    <string name="sharing_error">Message has not been successfully posted</string>
+    <string name="sharing_dublicated">Message has not been successfully posted cause status was dublicated</string>
+    <string name="sharing_label">Sharing</string>
+    <string name="sharing_text">Check out this iBuildApp marketplace app</string>
+
+    <string name="sharing_post_facebook">Post</string>
+    <string name="sharing_post_twitter">Tweet</string>
+
+    <string name="sharing_sms_title">Select Contacts</string>
+    <string name="sharing_sms_success">Sms has been successfully send</string>
+    <string name="sharing_sms_error">Sms has not been send</string>
+
+    <string name="loading">Loading</string>
+
+    <string name="search">Search</string>
+    <string name="done">Done</string>
+
+    <string name="sharing_email_found">I\'ve found this app on iBuildApp Market:</string>
+    <integer name="preference_token_file_key">16</integer>
+</resources>

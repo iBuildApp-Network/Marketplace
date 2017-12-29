@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="facebook_topbar">#314f90</color>
+    <color name="twitter_topbar">#57adee</color>
+    <color name="white_trans_20">#33ffffff</color>
+    <color name="white_trans_80">#ccffffff</color>
+    <color name="black_trans_90">#e6000000</color>
+    <color name="black_trans_60">#99000000</color>
+    <color name="black_trans_20">#33000000</color>
+    <color name="black_trans_10">#19000000</color>
+</resources>
